@@ -97,7 +97,11 @@ Q28: WITH monthly_spent AS (SELECT o.order_date,o.product_id,o.quantity,o.custom
 	(SELECT customer_id,name,sum(June_Spent) AS June_Spent,sum(July_Spent) AS July_Spent
 	FROM monthly_spent group by customer_id,name)ds WHERE June_Spent >=100 and July_Spent>=100;
 
-Q29: 
+Q29: SELECT content.title FROM content 
+	JOIN  tvprogram
+	ON content.content_id=tvprogram.content_id
+	WHERE kids_content='Y'
+	AND EXTRACT(month from program_date)= 6;
 
 Q30:
 
