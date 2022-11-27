@@ -108,6 +108,9 @@ Q30: SELECT queries.id,queries.year, COALESCE(npv.npv,0) AS npv FROM npv RIGHT J
 	
 Q31: Question same as Q30.
 
+Q32: SELECT unique_id,name FROM employees LEFT JOIN employeesuni
+	ON employees.id=employeesuni.id ;
+
 
 
 
