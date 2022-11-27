@@ -103,7 +103,8 @@ Q29: SELECT content.title FROM content
 	WHERE kids_content='Y'
 	AND EXTRACT(month from program_date)= 6;
 
-Q30:
+Q30: SELECT queries.id,queries.year, COALESCE(npv.npv,0) AS npv FROM npv RIGHT JOIN queries
+	ON npv.id=queries.id AND npv.year=queries.year;
 
 
 
