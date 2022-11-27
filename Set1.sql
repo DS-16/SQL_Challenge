@@ -105,7 +105,8 @@ Q29: SELECT content.title FROM content
 
 Q30: SELECT queries.id,queries.year, COALESCE(npv.npv,0) AS npv FROM npv RIGHT JOIN queries
 	ON npv.id=queries.id AND npv.year=queries.year;
-
+	
+Q31: Question same as Q30.
 
 
 
